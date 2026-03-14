@@ -2,7 +2,7 @@
 
 **A multi-site double machine learning study of 1.5 million culture episodes**
 
-This repository contains the analysis code for estimating the causal effect of prior antibiotic exposure on subsequent antimicrobial resistance using double machine learning (DML) with XGBoost GPU nuisance models across three U.S. health systems: Mass General Brigham (MGB), Stanford Health Care, and MIMIC-IV.
+This repository contains the analysis code for estimating the causal effect of prior antibiotic exposure on subsequent antimicrobial resistance using double machine learning (DML) with XGBoost GPU nuisance models across three U.S. health systems: Mass General Brigham (MGB), Stanford Health Care, and Beth Israel Deaconess Medical Center (BIDMC, via the MIMIC-IV dataset).
 
 ## Data Requirements
 
