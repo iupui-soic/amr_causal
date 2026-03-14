@@ -6,13 +6,14 @@ This repository contains the analysis code for estimating the causal effect of p
 
 ## Data Requirements
 
-- **MGB and Stanford**: Antimicrobial Resistance and Microbiome Database (ARMD) v1.0.0. Access requires institutional data use agreement.
-- **MIMIC-IV v3.1**: Publicly available via [PhysioNet](https://physionet.org/content/mimiciv/3.1/). Requires CITI training and signed DUA.
+- **MGB**: [ARMD-MGB v1.0.0](https://physionet.org/content/armd-mgb/1.0.0/) (Wei & Kanjilal, 2025). Requires PhysioNet credentialed access.
+- **Stanford**: [ARMD-Stanford](https://datadryad.org/dataset/doi:10.5061/dryad.jq2bvq8kp) (Nateghi Haredasht et al., 2025; Oct 22, 2025 release). Available on Dryad under CC0.
+- **BIDMC/MIMIC**: [MIMIC-IV v3.1](https://physionet.org/content/mimiciv/3.1/) (Johnson et al., 2023). Requires CITI training and signed DUA.
 
 Raw data files should be placed in:
 - `/data0/armd/` (MGB)
 - `/data0/armd-stanford/` (Stanford)
-- `/data0/mimic-iv/` (MIMIC-IV)
+- `/data0/mimic-iv/` (BIDMC / MIMIC-IV)
 
 ## Installation
 
@@ -75,10 +76,8 @@ All P < 0.005 except *P = 0.16. Sulfonamides not testable in MIMIC-IV.
 
 ```bibtex
 @article{kuruvikkattil2026amr,
-  title   = {Prior Antibiotic Exposure and the Causal Risk of
-             Antimicrobial Resistance: A Multi-Site Study of
-             1.5 Million Culture Episodes},
-  author  = {Kuruvikkattil, Aravind V. and others},
+  title   = {Prior Antibiotic Exposure and the Causal Risk of Antimicrobial Resistance: A Multi-Site Study of 1.5 Million Culture Episodes},
+  author  = {Kuruvikkattil, Aravind V. and Celi, Leo and Gichoya, Judy W. and Purkayastha, Saptarshi},
   year    = {2026},
   journal = {Submitted},
 }
