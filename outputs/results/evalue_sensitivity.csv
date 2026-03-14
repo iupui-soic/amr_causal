@@ -1,0 +1,20 @@
+cohort,drug,theta_pp,ci_lo_pp,baseline,rr,evalue_point,evalue_ci,interpretation
+MGB,FQ,15.2,14.5,0.28,1.543,2.46,2.4,✅ Robust
+MGB,Ceph3,5.3,4.8,0.22,1.241,1.79,1.73,⚠️  Moderate
+MGB,Carb/CRE,5.4,4.6,0.04,2.35,4.13,3.72,💪 Very robust
+MGB,Glyco/VRE,4.6,4.1,0.08,1.575,2.53,2.39,✅ Robust
+MGB,Sulfa,16.0,15.3,0.29,1.552,2.48,2.43,✅ Robust
+MGB,ESP,4.1,3.6,0.3,1.137,1.53,1.49,❌ Fragile
+MGB,Amino,4.4,2.9,0.15,1.293,1.91,1.67,⚠️  Moderate
+Stanford,FQ,17.6,16.8,0.24,1.733,2.86,2.79,✅ Robust
+Stanford,Ceph3,8.8,6.8,0.19,1.463,2.29,2.06,✅ Robust
+Stanford,Carb/CRE,5.6,3.9,0.03,2.867,5.18,4.03,💪 Very robust
+Stanford,Glyco/VRE,5.9,4.1,0.07,1.843,3.09,2.55,✅ Robust
+Stanford,ESP,5.6,3.6,0.28,1.2,1.69,1.51,⚠️  Moderate
+Stanford,Amino,9.7,6.1,0.14,1.693,2.78,2.23,✅ Robust
+MIMIC,FQ,22.7,20.8,0.25,1.908,3.22,3.07,💪 Very robust
+MIMIC,Ceph3,11.5,9.7,0.2,1.575,2.53,2.33,✅ Robust
+MIMIC,Carb/CRE,5.8,3.4,0.05,2.16,3.74,2.75,✅ Robust
+MIMIC,Glyco/VRE,7.7,6.3,0.09,1.856,3.12,2.79,✅ Robust
+MIMIC,ESP,3.9,2.0,0.29,1.134,1.53,1.34,❌ Fragile
+MIMIC,Amino,17.0,10.7,0.16,2.062,3.54,2.73,✅ Robust
