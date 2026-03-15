@@ -36,6 +36,7 @@ Run the full analysis pipeline:
 ./run_analysis.sh final    # Cross-site analyses only
 ```
 
+Notebooks are executed via `jupyter nbconvert --execute` with a 2-hour timeout per notebook.
 Total runtime: approximately 3-5 hours on a single GPU.
 
 ## Repository Structure

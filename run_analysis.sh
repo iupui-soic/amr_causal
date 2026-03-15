@@ -13,10 +13,9 @@
 #   python3 -m venv .venv
 #   source .venv/bin/activate
 #   pip install -r requirements.txt
-#   python -m ipykernel install --user --name amr_causal
 #
 # Output structure:
-#   ~/amr_causal/outputs/
+#   outputs/
 #     data/mgb/          — MGB intermediate master CSVs
 #     data/stanford/     — Stanford intermediate master CSVs
 #     data/mimic/        — MIMIC intermediate master CSVs
@@ -38,7 +37,7 @@ else
 fi
 
 # Create output directories
-mkdir -p ~/amr_causal/outputs/{data/{mgb,stanford,mimic,validation},results/downstream,figures}
+mkdir -p outputs/{data/{mgb,stanford,mimic,validation},results,figures}
 
 EXECUTED_DIR="$SCRIPT_DIR/executed"
 mkdir -p "$EXECUTED_DIR"
@@ -53,11 +52,10 @@ run_notebook() {
     echo "  Output:  $output"
     echo "  Started: $(date '+%Y-%m-%d %H:%M:%S')"
     echo "══════════════════════════════════════════════════════════════"
-    papermill "$input" "$output" \
-        --kernel amr_causal \
-        --no-progress-bar \
-        --log-output \
-        --log-level WARNING
+    jupyter nbconvert --to notebook --execute "$input" \
+        --output "$(realpath "$output")" \
+        --ExecutePreprocessor.timeout=7200 \
+        --ExecutePreprocessor.kernel_name=python3
     echo "  Finished: $(date '+%Y-%m-%d %H:%M:%S')"
     echo "  Status:   SUCCESS"
 }
@@ -81,8 +79,8 @@ case "$TARGET" in
         echo ""
         echo "══════════════════════════════════════════════════════════════"
         echo "  ALL NOTEBOOKS COMPLETED SUCCESSFULLY"
-        echo "  Results: ~/amr_causal/outputs/results/"
-        echo "  Figures: ~/amr_causal/outputs/figures/"
+        echo "  Results: outputs/results/"
+        echo "  Figures: outputs/figures/"
         echo "══════════════════════════════════════════════════════════════"
         ;;
     *)
