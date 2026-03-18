@@ -1,0 +1,25 @@
+cohort,sensitivity,drug_class,specimen,n_empiric,n_exposed,n_unexposed,failure_exposed_pct,failure_unexposed_pct,risk_diff_pp,p_value,significant
+MIMIC-IV,ICU only,FQ,Blood,190,64,126,79.7,39.7,40.0,0.0,True
+MIMIC-IV,ICU only,FQ,All,2136,475,1661,61.9,25.0,36.8,0.0,True
+MIMIC-IV,ICU only,Ceph3,Blood,343,124,219,21.8,13.2,8.5,0.057173,False
+MIMIC-IV,ICU only,Ceph3,All,3503,1194,2309,19.6,6.7,12.9,0.0,True
+MIMIC-IV,ICU only,Carb,Blood,94,41,53,24.4,7.5,16.8,0.038434,True
+MIMIC-IV,ICU only,Carb,All,683,313,370,23.3,10.5,12.8,1.1e-05,True
+MIMIC-IV,ICU only,Glyco,Blood,1093,529,564,31.6,7.4,24.1,0.0,True
+MIMIC-IV,ICU only,Glyco,All,3356,1622,1734,28.9,7.7,21.2,0.0,True
+MIMIC-IV,ICU only,ESP,Blood,268,106,162,68.9,39.5,29.4,5e-06,True
+MIMIC-IV,ICU only,ESP,All,1257,450,807,56.4,32.2,24.2,0.0,True
+MIMIC-IV,ICU only,Amino,Blood,49,9,40,0.0,17.5,-17.5,0.32208,False
+MIMIC-IV,ICU only,Amino,All,275,113,162,8.0,6.8,1.2,0.894185,False
+MIMIC-IV,Non-ICU only,FQ,Blood,878,173,705,68.2,28.8,39.4,0.0,True
+MIMIC-IV,Non-ICU only,FQ,All,6389,1191,5198,61.9,26.5,35.3,0.0,True
+MIMIC-IV,Non-ICU only,Ceph3,Blood,1691,319,1372,16.0,5.4,10.6,0.0,True
+MIMIC-IV,Non-ICU only,Ceph3,All,9780,1764,8016,14.8,4.6,10.2,0.0,True
+MIMIC-IV,Non-ICU only,Carb,Blood,270,99,171,5.1,2.9,2.1,0.577346,False
+MIMIC-IV,Non-ICU only,Carb,All,1245,478,767,10.5,4.2,6.3,2.3e-05,True
+MIMIC-IV,Non-ICU only,Glyco,Blood,2420,711,1709,10.3,2.1,8.2,0.0,True
+MIMIC-IV,Non-ICU only,Glyco,All,6273,1941,4332,19.1,4.0,15.1,0.0,True
+MIMIC-IV,Non-ICU only,ESP,Blood,877,149,728,47.0,28.6,18.4,1.7e-05,True
+MIMIC-IV,Non-ICU only,ESP,All,2826,545,2281,51.0,30.4,20.6,0.0,True
+MIMIC-IV,Non-ICU only,Amino,Blood,95,14,81,21.4,1.2,20.2,0.009576,True
+MIMIC-IV,Non-ICU only,Amino,All,376,81,295,8.6,3.4,5.3,0.086658,False
