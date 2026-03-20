@@ -2,6 +2,8 @@
 
 **A multi-site double machine learning study of 1.5 million culture episodes**
 
+Aravind V. Kuruvikkattil, Leo Celi, Judy W. Gichoya, Saptarshi Purkayastha
+
 This repository contains the analysis code for estimating the causal effect of prior antibiotic exposure on subsequent antimicrobial resistance using double machine learning (DML) with XGBoost GPU nuisance models across three U.S. health systems: Mass General Brigham (MGB), Stanford Health Care, and Beth Israel Deaconess Medical Center (BIDMC, via the MIMIC-IV dataset).
 
 ## Data Requirements
@@ -81,15 +83,15 @@ amr_causal/
 
 | Drug Class | MGB (ACE, pp) | Stanford (ACE, pp) | MIMIC-IV (ACE, pp) |
 |------------|:-------------:|:------------------:|:------------------:|
-| Fluoroquinolones | 14.8 | 16.8 | 8.7 |
-| 3rd-gen cephalosporins | 5.6 | 8.4 | 3.6 |
-| Carbapenems | 5.3 | 5.8 | 4.6 |
-| Glycopeptides | 4.7 | 6.2 | 3.3 |
-| Sulfonamides | 15.8 | 3.9* | --- |
-| Ext-spec penicillins | 3.9 | 6.0 | 4.1 |
-| Aminoglycosides | 3.3 | 7.5 | 6.7 |
+| Fluoroquinolones | 14.8 | 16.5 | 8.7 |
+| 3rd-gen cephalosporins | 5.6 | 8.7 | 3.6 |
+| Carbapenems | 5.3 | 5.9 | 4.6 |
+| Glycopeptides | 4.7 | 6.4 | 3.3 |
+| Sulfonamides | 15.9 | 3.5* | --- |
+| Ext-spec penicillins | 3.9 | 6.2 | 4.1 |
+| Aminoglycosides | 3.4 | 7.4 | 6.7 |
 
-All P < 0.005 except *P = 0.16. Sulfonamides not testable in MIMIC-IV.
+All P < 0.005 except *P = 0.15. Sulfonamides not testable in MIMIC-IV.
 
 ## Citation
 
