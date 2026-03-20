@@ -2,7 +2,7 @@
 
 **A multi-site double machine learning study of 1.5 million culture episodes**
 
-Aravind V. Kuruvikkattil, Leo Celi, Judy W. Gichoya, Saptarshi Purkayastha
+Aravind V. Kuruvikkattil, Shikhar Shukla, Leo A. Celi, Zanthia Wiley, Judy W. Gichoya, Saptarshi Purkayastha
 
 This repository contains the analysis code for estimating the causal effect of prior antibiotic exposure on subsequent antimicrobial resistance using double machine learning (DML) with XGBoost GPU nuisance models across three U.S. health systems: Mass General Brigham (MGB), Stanford Health Care, and Beth Israel Deaconess Medical Center (BIDMC, via the MIMIC-IV dataset).
 
@@ -98,7 +98,7 @@ All P < 0.005 except *P = 0.15. Sulfonamides not testable in MIMIC-IV.
 ```bibtex
 @article{kuruvikkattil2026amr,
   title   = {Prior Antibiotic Exposure and the Causal Risk of Antimicrobial Resistance: A Multi-Site Study of 1.5 Million Culture Episodes},
-  author  = {Kuruvikkattil, Aravind V. and Celi, Leo and Gichoya, Judy W. and Purkayastha, Saptarshi},
+  author  = {Kuruvikkattil, Aravind V. and Shukla, Shikhar and Celi, Leo A. and Wiley, Zanthia and Gichoya, Judy W. and Purkayastha, Saptarshi},
   year    = {2026},
   journal = {Submitted},
 }
