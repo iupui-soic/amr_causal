@@ -1,5 +1,6 @@
 # Data (too large for git)
 outputs/data/
+outputs/empiric_failure/
 *.csv.gz
 
 # Executed notebooks (reproducible from source)
@@ -8,7 +9,6 @@ outputs/*_executed.ipynb
 
 # Manuscript (managed via Overleaf)
 manuscript/
-manuscript.tex
 
 # Claude Code project settings
 .claude/

@@ -30,14 +30,26 @@ Requires Python 3.10+ and an NVIDIA GPU with CUDA support for XGBoost GPU accele
 Run the full analysis pipeline:
 
 ```bash
-./run_analysis.sh          # All 3 notebooks sequentially
+./run_analysis.sh          # All 4 notebooks sequentially
 ./run_analysis.sh part1    # Data pipeline + primary DML only
 ./run_analysis.sh part2    # Sensitivity analyses only
-./run_analysis.sh final    # Cross-site analyses only
+./run_analysis.sh part3    # Cross-site downstream analyses only
+./run_analysis.sh part4    # Empiric failure analysis only
 ```
 
 Notebooks are executed via `jupyter nbconvert --execute` with a 2-hour timeout per notebook.
-Total runtime: approximately 3-5 hours on a single GPU.
+Total runtime: approximately 4-6 hours on a single GPU.
+
+### Pipeline overview
+
+| Step | Notebook | Description | Key outputs |
+|------|----------|-------------|-------------|
+| 1 | `01_data_pipeline_dml.ipynb` | Data build + primary DML | `*_dml_primary.csv`, `evalues.csv` |
+| 2 | `02_sensitivity_analyses.ipynb` | IPTW robustness, E-values, window sensitivity, dose-response | `iptw_results.csv`, `dml_vs_iptw.csv` |
+| 3 | `03_cross_site_downstream.ipynb` | Forest plot, heterogeneity, time decay, permutations, CEM | `fig1_forest_plot.pdf`, `fig_time_decay.pdf` |
+| 4 | `04_empiric_failure_analysis.ipynb` | Empiric therapy failure rates and preventable failures | `ef_failure_all.csv`, failure figures |
+
+Notebooks must be run in order (each depends on outputs from previous steps).
 
 ## Repository Structure
 
@@ -48,14 +60,20 @@ amr_causal/
 ├── .gitignore
 ├── requirements.txt
 ├── run_analysis.sh                    (pipeline runner)
+├── validate_pipeline.py               (output validation)
 ├── notebooks/
 │   ├── 01_data_pipeline_dml.ipynb     (data build + primary DML)
 │   ├── 02_sensitivity_analyses.ipynb  (IPTW, E-values, window, dose-response)
-│   └── 03_cross_site_analyses.ipynb   (heterogeneity, permutations, CEM)
+│   ├── 03_cross_site_downstream.ipynb (heterogeneity, permutations, CEM)
+│   └── 04_empiric_failure_analysis.ipynb (empiric therapy failure)
 ├── outputs/
 │   ├── data/                          (intermediate CSVs, gitignored)
 │   ├── results/                       (analysis result CSVs)
 │   └── figures/                       (publication figures)
+├── manuscript/
+│   ├── manuscript.tex
+│   ├── supplementary.tex
+│   └── figures/                       (copied from outputs/figures/)
 └── executed/                          (executed notebooks, gitignored)
 ```
 

@@ -4,10 +4,11 @@
 # ══════════════════════════════════════════════════════════════
 #
 # Usage:
-#   ./run_analysis.sh          # Run all 3 notebooks in order
-#   ./run_analysis.sh part1    # Run only part 1
-#   ./run_analysis.sh part2    # Run only part 2
-#   ./run_analysis.sh final    # Run only final notebook
+#   ./run_analysis.sh              # Run all 4 notebooks in order
+#   ./run_analysis.sh part1        # Data pipeline + primary DML
+#   ./run_analysis.sh part2        # Sensitivity analyses (IPTW, E-values)
+#   ./run_analysis.sh part3        # Cross-site downstream analyses
+#   ./run_analysis.sh part4        # Empiric failure analysis
 #
 # Prerequisites:
 #   python3 -m venv .venv
@@ -69,22 +70,34 @@ case "$TARGET" in
     part2)
         run_notebook 02_sensitivity_analyses.ipynb
         ;;
-    final)
+    part3)
         run_notebook 03_cross_site_downstream.ipynb
+        ;;
+    part4)
+        run_notebook 04_empiric_failure_analysis.ipynb
         ;;
     all)
         run_notebook 01_data_pipeline_dml.ipynb
         run_notebook 02_sensitivity_analyses.ipynb
         run_notebook 03_cross_site_downstream.ipynb
+        run_notebook 04_empiric_failure_analysis.ipynb
+
+        # Copy figures to manuscript directory
+        echo ""
+        echo "  Copying figures to manuscript/figures/ ..."
+        mkdir -p manuscript/figures/png
+        cp outputs/figures/*.pdf manuscript/figures/ 2>/dev/null || true
+        cp outputs/figures/*.png manuscript/figures/png/ 2>/dev/null || true
+
         echo ""
         echo "══════════════════════════════════════════════════════════════"
-        echo "  ALL NOTEBOOKS COMPLETED SUCCESSFULLY"
+        echo "  ALL 4 NOTEBOOKS COMPLETED SUCCESSFULLY"
         echo "  Results: outputs/results/"
         echo "  Figures: outputs/figures/"
         echo "══════════════════════════════════════════════════════════════"
         ;;
     *)
-        echo "Usage: $0 [part1|part2|final|all]"
+        echo "Usage: $0 [part1|part2|part3|part4|all]"
         exit 1
         ;;
 esac
