@@ -1,6 +1,6 @@
 # Causal Effects of Antibiotic Exposure on Antimicrobial Resistance
 
-**A multi-site double machine learning study of 1.5 million culture episodes**
+**A multi-site double machine learning study of 1.2 million culture episodes**
 
 Aravind V. Kuruvikkattil, Shikhar Shukla, Leo A. Celi, Zanthia Wiley, Judy W. Gichoya, Saptarshi Purkayastha
 
@@ -83,21 +83,21 @@ amr_causal/
 
 | Drug Class | MGB (ACE, pp) | Stanford (ACE, pp) | MIMIC-IV (ACE, pp) |
 |------------|:-------------:|:------------------:|:------------------:|
-| Fluoroquinolones | 14.8 | 16.5 | 8.7 |
-| 3rd-gen cephalosporins | 5.6 | 8.7 | 3.6 |
-| Carbapenems | 5.3 | 5.9 | 4.6 |
-| Glycopeptides | 4.7 | 6.4 | 3.3 |
+| Fluoroquinolones | 14.8 | 16.5 | 9.4 |
+| 3rd-gen cephalosporins | 5.5 | 8.7 | 4.0 |
+| Carbapenems | 5.3 | 5.9 | 4.9 |
+| Glycopeptides | 4.8 | 6.4 | 3.6 |
 | Sulfonamides | 15.9 | 3.5* | --- |
-| Ext-spec penicillins | 3.9 | 6.2 | 4.1 |
-| Aminoglycosides | 3.4 | 7.4 | 6.7 |
+| Ext-spec penicillins | 3.9 | 6.2 | 4.4 |
+| Aminoglycosides | 3.3 | 7.4 | 7.0 |
 
-All P < 0.005 except *P = 0.15. Sulfonamides not testable in MIMIC-IV.
+All P < 0.001 except *P = 0.16. Sulfonamides not testable in MIMIC-IV.
 
 ## Citation
 
 ```bibtex
 @article{kuruvikkattil2026amr,
-  title   = {Prior Antibiotic Exposure and the Causal Risk of Antimicrobial Resistance: A Multi-Site Study of 1.5 Million Culture Episodes},
+  title   = {Prior Antibiotic Exposure and the Causal Risk of Antimicrobial Resistance: A Multi-Site Study of 1.2 Million Culture Episodes},
   author  = {Kuruvikkattil, Aravind V. and Shukla, Shikhar and Celi, Leo A. and Wiley, Zanthia and Gichoya, Judy W. and Purkayastha, Saptarshi},
   year    = {2026},
   journal = {Submitted},
