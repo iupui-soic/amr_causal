@@ -83,13 +83,13 @@ amr_causal/
 
 | Drug Class | MGB (ACE, pp) | Stanford (ACE, pp) | MIMIC-IV (ACE, pp) |
 |------------|:-------------:|:------------------:|:------------------:|
-| Fluoroquinolones | 14.8 | 16.5 | 9.4 |
-| 3rd-gen cephalosporins | 5.5 | 8.7 | 4.0 |
-| Carbapenems | 5.3 | 5.9 | 4.9 |
-| Glycopeptides | 4.8 | 6.4 | 3.6 |
+| Fluoroquinolones | 14.7 | 16.5 | 9.1 |
+| 3rd-gen cephalosporins | 5.5 | 8.7 | 4.1 |
+| Carbapenems | 5.3 | 5.9 | 4.7 |
+| Glycopeptides | 4.8 | 6.4 | 3.5 |
 | Sulfonamides | 15.9 | 3.5* | --- |
-| Ext-spec penicillins | 3.9 | 6.2 | 4.4 |
-| Aminoglycosides | 3.3 | 7.4 | 7.0 |
+| Ext-spec penicillins | 3.9 | 6.2 | 4.2 |
+| Aminoglycosides | 3.3 | 7.4 | 6.8 |
 
 All P < 0.001 except *P = 0.16. Sulfonamides not testable in MIMIC-IV.
 
